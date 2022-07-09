@@ -1,0 +1,40 @@
+body {
+  background-color: map-get($colors, 'body-bg');
+  font-family: 'Roboto', sans-serif;
+  @include font-set(14px, false, false, 0.03em, map-get($colors, 'primary-text'));
+  position: relative;
+}
+
+main {
+  background-color: map-get($colors, 'primary-white');
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include device($desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.advantages.section {
+  @include device($tablet) {
+    padding-bottom: 47px;
+  }
+}
+
+.we-doing.section {
+  padding-top: 47px;
+}
+.section__title {
+  @include font-set(28px, 700, calc(33 / 28), false, map-get($colors, 'title-text'));
+  text-align: center;
+  margin-bottom: 30px;
+
+  @include device($desktop) {
+    @include font-set(36px, false, 1.2, false, false);
+    margin-bottom: 50px;
+  }
+}

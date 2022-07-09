@@ -1,0 +1,102 @@
+.header {
+  background-color: map-get($colors, 'primary-white');
+  border-bottom: 1px solid map-get($colors, 'primary-border');
+  @include font-set(false, 500, 1.14, 0.02em, false);
+}
+
+.contacts-header {
+  display: flex;
+  @include device(false, $tablet - 1) {
+    flex-direction: column-reverse;
+  }
+
+  @include device($tablet, $desktop - 1) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.contacts-header__item--social {
+  @include device($tablet) {
+    display: none;
+  }
+}
+.contacts-header__item:last-of-type {
+  @include device($tablet, $desktop - 1) {
+    margin-top: 10px;
+  }
+}
+.contacts-header__item + .contacts-header__item {
+  @include device($desktop) {
+    margin-left: 50px;
+  }
+}
+
+.contacts-header__link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'accent');
+  }
+  @include device($desktop) {
+    padding: 32px 0;
+  }
+}
+.contacts-header__link--email {
+  @include device(false, $tablet - 1) {
+    @include font-set(24px, false, calc(28 / 24), false, false);
+    margin-bottom: 64px;
+    @include device(false, 479px) {
+      @include font-set(calc(0.6 * 24px + 2vw), false, false, false, false);
+    }
+  }
+}
+
+.contacts-header__link--tel {
+  @include device(false, $tablet - 1) {
+    @include font-set(34px, false, calc(40 / 34), false, map-get($colors, 'accent'));
+    margin-bottom: 32px;
+    @include device(false, 479px) {
+      @include font-set(calc(0.57 * 34px + 3vw), false, false, false, false);
+    }
+  }
+}
+
+.contacts-header__icon {
+  display: none;
+
+  @include device($tablet) {
+    display: block;
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+.contacts-header__item--social {
+  margin: 0 -10px;
+}
+
+.social-header {
+  display: flex;
+}
+
+.social-header__item {
+  padding: 0 10px;
+}
+
+.social-header__item + .social-header__item {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.social-header__link {
+  @include font-set(18px, 500, calc(22 / 18), false, map-get($colors, 'accent'));
+
+  @include device(false, 479px) {
+    @include font-set(calc(0.2 * 18px + 3vw), false, false, false, false);
+  }
+}

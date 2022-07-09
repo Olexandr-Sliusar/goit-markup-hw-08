@@ -1,0 +1,23 @@
+// utils
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+// base
+@import './base/reset';
+@import './base/common';
+@import './base/container';
+
+// components
+@import './components/logo';
+@import './components/header';
+@import './components/navigation';
+@import './components/solution';
+@import './components/advantages';
+@import './components/we-doing';
+@import './components/team';
+@import './components/clients';
+@import './components/filter';
+@import './components/portfolio';
+@import './components/footer';
+@import './components/modal-form';

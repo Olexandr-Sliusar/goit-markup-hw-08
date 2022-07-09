@@ -1,0 +1,32 @@
+.logo {
+    @include device($tablet) {
+    @include font-set(26px, 700, 1.2, false, map-get($colors, 'accent'));
+  }
+
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  @include font-set(24px, 700, calc(28/24), false, map-get($colors, 'accent'));
+}
+
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+    @include device($tablet){
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.logo__text {
+  color: map-get($colors, 'primary-black');
+
+  &--white {
+    color: map-get($colors, 'primary-white');
+  }
+}

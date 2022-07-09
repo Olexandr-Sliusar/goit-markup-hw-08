@@ -1,0 +1,29 @@
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include device($desktop) {
+    max-width: 1200px;
+  }
+  @include device(false, $desktop - 1) {
+    max-width: 768px;
+  }
+
+  @include device(false, $tablet - 1) {
+    max-width: 480px;
+  }
+}
+
+.footer > .container {
+  @include device($tablet) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}

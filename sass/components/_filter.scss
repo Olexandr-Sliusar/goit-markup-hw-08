@@ -1,0 +1,45 @@
+.filter {
+  @include font-set(16px, 500, 1.6, false, map-get($colors, 'title-text'));
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -8px;
+
+  @include device($tablet) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item {
+  margin-left: 8px;
+  margin-top: 8px;
+  @include device($tablet) {
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+}
+
+.filter__btn {
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  background-color: map-get($colors, 'section-bg');
+  @include font-set(inherit, inherit, inherit, false, inherit);
+  border-style: none;
+  padding: 6px 22px;
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .filter__item--active > &,
+  &:hover,
+  &:focus {
+    color: map-get($colors, 'primary-white');
+    background-color: map-get($colors, 'accent');
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

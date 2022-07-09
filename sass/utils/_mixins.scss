@@ -1,0 +1,42 @@
+@mixin font-set(
+  $size: false,
+  $weight: false,
+  $line-height: false,
+  $letter-spacing: false,
+  $colour: false
+) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $line-height {
+    line-height: $line-height;
+  }
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
+  }
+  @if $colour {
+    color: $colour;
+  }
+}
+
+// @include font-set(false, false, false, false, false);
+
+@mixin device($min-width: false, $max-width: false) {
+  @if $min-width and $max-width {
+    @media screen and(min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  } @else if $max-width {
+    @media screen and (max-width: $max-width) {
+      @content;
+    }
+  } @else if $min-width {
+    @media screen and(min-width: $min-width) {
+      @content;
+    }
+  }
+}
+// @include device(false, false)
