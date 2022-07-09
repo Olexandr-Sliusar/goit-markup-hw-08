@@ -883,6 +883,11 @@ main {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contacts-footer {
+    text-align: left;
+  }
+}
 
 .contacts-footer__address {
   font-style: normal;

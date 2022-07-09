@@ -8,6 +8,9 @@
   @include device(false, $desktop) {
     margin-bottom: 60px;
   }
+  @include device($desktop) {
+    text-align: left;
+  }
 }
 .contacts-footer__address {
   font-style: normal;
