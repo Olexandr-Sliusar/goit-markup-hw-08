@@ -556,11 +556,6 @@ main {
     text-align: left;
   }
 }
-@media screen and (min-width: 1200px) {
-  .advantage-item__title {
-    width: 358px;
-  }
-}
 
 @media screen and (max-width: 1199px) {
   .we-doing {
