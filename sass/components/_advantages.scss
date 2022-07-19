@@ -45,8 +45,4 @@
   @include device($tablet) {
     text-align: left;
   }
-
-  @include device($desktop) {
-    width: 358px;
-  }
 }
